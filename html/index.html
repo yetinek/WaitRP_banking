@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w_banking - UI: by mioyami</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="bankContainer">
+        <div class="nav">
+            <div class="mainMenu">
+                <div class="accountSelect">
+                    <div class="title">Konto osobiste</div>
+                    <div class="icon">
+                        <img src="icons/chevron-down.svg" alt="">
+                    </div>
+                    <div class="accountsSelector">
+                        <div class="account">Konto osobiste</div>
+                        <div class="account">Konto firmowe</div>
+                    </div>
+                </div>
+                <div class="welcomeContainer">
+                    <div class="welcomeItem">
+                        <div class="title">Witaj</div>
+                        <div class="desc" id="name">John Doe</div>
+                    </div>
+                    <div class="welcomeItem">
+                        <div class="title">Stan konta</div>
+                        <div class="desc" id="money">$ 65 416 516 21</div>
+                    </div>
+                    <div class="welcomeItem">
+                        <div class="title">Zmiana w ciągu ostatnich 7 dni</div>
+                        <div class="desc green" id="changeIn7days">$ 5 416 516 213</div>
+                    </div>
+                    <div class="welcomeItem">
+                        <div class="accCopy">
+                            <div class="title">Numer konta</div>
+                            <div class="btnCopy">Skopiuj</div>
+                        </div>
+                        <div class="accountNumber">48 8465 4556 4513 4564 6564</div>
+                    </div>
+                </div>
+                <div class="actionsContainer">
+                    <div class="btn withdrawDep">
+                        <div class="icon">
+                            <img src="icons/deposit.svg" alt="">
+                        </div>
+                        <div class="title">Wpłata</div>
+                    </div>
+                    <div class="btn withdrawDep">
+                        <div class="icon">
+                            <img src="icons/withdraw.svg" alt="">
+                        </div>
+                        <div class="title">Wypłata</div>
+                    </div>
+                </div>
+                <div class="actionsContainer">
+                    <div class="btn transfer">
+                        <div class="icon">
+                            <img src="icons/arrow-left-right.svg" alt="">
+                        </div>
+                        <div class="title">Transfer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="historySearch">
+                <div class="inputSearch">
+                    <input type="text" class="historyInput" placeholder="Wyszukaj operacji">
+                    <div class="icon">
+                        <img src="icons/search.svg" alt="">
+                    </div>
+                </div>
+                <div class="rangeSearch">
+                    <div class="title">Zakres operacji</div>
+                    <div class="rangeSliders">
+                        <div class="valueDis" id="minValue">0$</div>
+                        <div class="valueDis" id="maxValue">1000$</div>
+                        <div class="range">
+                            <div class="rangeVal"></div>
+                        </div>
+                        <input type="range" min="1" value="1" max="312" step="1" class="min">
+                        <input type="range" min="1" value="312" max="312" step="1" class="max">
+                    </div>
+                </div>
+                <div class="rangeSelect">
+                    <div class="title">Wybierz zakres dat</div>
+                    <div class="icon">
+                        <img src="icons/chevron-down.svg" alt="">
+                    </div>
+                    <div class="rangeSelector">
+                        <div class="range" data-days="0">Wybierz zakres dat</div>
+                        <div class="range" data-days="1">Ostatnie 24 godziny</div>
+                        <div class="range" data-days="3">Ostatnie 3 dni</div>
+                        <div class="range" data-days="7">Ostatnie 7 dni</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="transferMoney transfer">
+                <div class="title">Transfer funduszy</div>
+                
+                <div class="option">
+                    <div class="title">Numer konta odbiorcy</div>
+                    <input type="number" class="input konto" placeholder="Wpisz numer konta odbiorcy">
+                </div>
+                <div class="option">
+                    <div class="title">Kwota przelewu</div>
+                    <input type="number" class="input kwota" placeholder="Wprowadź kwotę">
+                </div>
+                <div class="option">
+                    <div class="title">Tytuł przelewu</div>
+                    <input type="text" class="input tytul" placeholder="Wpisz tytuł przelewu">
+                </div>
+                <div class="btnConfirm">Potwierdź transfer</div>
+            </div>
+            <div class="transferMoney withdrawDep">
+                <div class="title"></div>
+                <div class="option">
+                    <div class="title">Kwota</div>
+                    <input type="number" class="input" placeholder="Wprowadź kwotę">
+                </div>
+                <div class="btnConfirm">Potwierdź</div>
+            </div>
+            <div class="historyContainer">
+                <div class="topContainer">
+                    <div class="title">Ostatnie operacje</div>
+                    <div class="btn">Przejdź do archiwum</div>
+                </div>
+                <div class="history">
+                    <div class="labels">
+                        <div class="item">Imię nazwisko</div>
+                        <div class="item accountNumber">Numer konta</div>
+                        <div class="item">Kwota</div>
+                        <div class="item">Data</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
